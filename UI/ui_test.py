@@ -24,7 +24,11 @@ class Index(QMainWindow, Ui_MainWindow):
         # self.menu_list.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Expanding)
         # s = self.menu_list.size() # for debugging
         # r = self.frame.size() # for debugging
-        # the image will not be found by the string path unless use qrc file to show the path or use the openCV (read file) to add the image into the memory
+        '''
+        the image will not be found by the string path 
+        unless use qrc file to show the path 
+        or use the openCV (read file) to add the image into the memory
+        '''
         img = imread('dog.jpg') # for debugging
         row = img.shape[0] # for debugging
         col = img.shape[1] # for debugging
@@ -34,6 +38,10 @@ class Index(QMainWindow, Ui_MainWindow):
         self.frame.setStyleSheet("border: 2px solid red") # for debugging
         self.frame.setScaledContents(True)
         self.showFullScreen()
+        '''
+        QLabel.setText will check if it's pure text or html
+        so the parameter -> str can be the html tag and the css stylesheet
+        '''
 
 
 if __name__ == '__main__':
