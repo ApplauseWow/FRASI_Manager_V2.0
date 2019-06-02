@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Index_UI</class>
+ <widget class="QMainWindow" name="Index_UI">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>906</width>
-    <height>735</height>
+    <width>908</width>
+    <height>736</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,8 +15,23 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0">
+     <layout class="QHBoxLayout" name="main_layout" stretch="8,0,4">
       <property name="spacing">
        <number>0</number>
       </property>
@@ -34,49 +49,40 @@
        </widget>
       </item>
       <item>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="font">
-           <font>
-            <family>FreeMono</family>
-            <pointsize>36</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(134, 134, 134);</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::WinPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <property name="lineWidth">
-           <number>10</number>
-          </property>
-          <property name="midLineWidth">
-           <number>10</number>
-          </property>
-          <property name="text">
-           <string>Menu</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QTreeWidget" name="menu_list">
+       <widget class="QToolButton" name="show_hide">
+        <property name="styleSheet">
+         <string notr="true">border-radius:9px;
+border:1px;
+background-color:black;
+color:white;</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="shortcut">
+         <string>F1</string>
+        </property>
+        <property name="popupMode">
+         <enum>QToolButton::DelayedPopup</enum>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonIconOnly</enum>
+        </property>
+        <property name="autoRaise">
+         <bool>false</bool>
+        </property>
+        <property name="arrowType">
+         <enum>Qt::RightArrow</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="menu_layout" rowstretch="3,1,1" columnstretch="0,0">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QTreeWidget" name="menu">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -427,7 +433,106 @@ background-color: rgb(134, 134, 134);</string>
              </font>
             </property>
            </item>
+           <item>
+            <property name="text">
+             <string>模型性能可视化</string>
+            </property>
+           </item>
           </item>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <layout class="QFormLayout" name="item_list">
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <property name="rowWrapPolicy">
+           <enum>QFormLayout::WrapAllRows</enum>
+          </property>
+          <property name="labelAlignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="formAlignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="nameLabel">
+            <property name="text">
+             <string>Name:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="iDLabel">
+            <property name="text">
+             <string>ID:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="dateLabel">
+            <property name="text">
+             <string>Date:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="name">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="id_num">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="date">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="status">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>36</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
          </widget>
         </item>
        </layout>

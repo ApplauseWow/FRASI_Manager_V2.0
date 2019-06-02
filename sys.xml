@@ -1,0 +1,10 @@
+<parameters>
+    
+    <param count="1" name="recognition_frame" />
+    
+    <param count="6" name="register_frame" />
+    
+    <param count="30" name="auto_sleep_interim" />
+    
+    <param count="3" name="detect_frame" />
+</parameters>
